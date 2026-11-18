@@ -1,0 +1,1050 @@
+[
+  {
+    "id": "m01",
+    "subject": "Mathématiques",
+    "topic": "Probabilités",
+    "type": "single",
+    "q": "Si la probabilité de gagner à un jeu est de 1/4, quelle est la probabilité de perdre (sans match nul) ?",
+    "o": [
+      "1/4",
+      "1/2",
+      "3/4",
+      "1",
+      "0"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Les deux issues sont complémentaires : P(perdre) = 1 − P(gagner) = 1 − 1/4 = 3/4.",
+    "src": "CCTL Mathématiques, Q1"
+  },
+  {
+    "id": "m02",
+    "subject": "Mathématiques",
+    "topic": "Probabilités",
+    "type": "single",
+    "q": "Quelle loi modélise le plus simplement le résultat d'un unique lancer de pièce (Pile ou Face) ?",
+    "o": [
+      "Loi de Poisson",
+      "Loi de Bernoulli",
+      "Loi normale",
+      "Loi uniforme continue",
+      "Loi exponentielle"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Une épreuve de Bernoulli possède deux issues : succès ou échec. Un lancer de pièce est donc modélisé par une loi de Bernoulli.",
+    "src": "CCTL Mathématiques, Q2"
+  },
+  {
+    "id": "m03",
+    "subject": "Mathématiques",
+    "topic": "Théorie des jeux",
+    "type": "single",
+    "q": "Comment appelle-t-on un jeu où les joueurs prennent leurs décisions les uns après les autres ?",
+    "o": [
+      "Jeu statique",
+      "Jeu à somme nulle",
+      "Jeu séquentiel (ou dynamique)",
+      "Jeu coopératif",
+      "Jeu symétrique"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Dans un jeu séquentiel, les joueurs jouent à tour de rôle et peuvent tenir compte des décisions précédentes.",
+    "src": "CCTL Mathématiques, Q3"
+  },
+  {
+    "id": "m04",
+    "subject": "Mathématiques",
+    "topic": "Statistiques",
+    "type": "single",
+    "q": "Que mesure l'écart-type d'un ensemble de données ?",
+    "o": [
+      "La valeur la plus fréquente",
+      "La tendance centrale",
+      "La dispersion des valeurs autour de la moyenne",
+      "Le nombre total d'observations",
+      "L'asymétrie"
+    ],
+    "a": [
+      2
+    ],
+    "e": "L'écart-type quantifie la dispersion des valeurs autour de leur moyenne. Plus il est grand, plus les valeurs sont dispersées.",
+    "src": "CCTL Mathématiques, Q4"
+  },
+  {
+    "id": "m05",
+    "subject": "Mathématiques",
+    "topic": "Algorithmique",
+    "type": "single",
+    "q": "Un algorithme trie un tableau puis compare chaque paire d'éléments voisins pour détecter un doublon. Quel est son rôle et sa complexité dans le pire cas ?",
+    "o": [
+      "Détecter si tous les éléments sont égaux, en O(n)",
+      "Détecter s'il existe au moins un doublon, en O(n log n)",
+      "Lister tous les doublons, en O(1)",
+      "Trier le tableau en O(n²)",
+      "Détecter un doublon en O(log n)"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Après le tri, deux valeurs égales sont nécessairement voisines. Le tri domine le parcours : O(n log n) pour un tri usuel.",
+    "src": "CCTL Mathématiques, Q5"
+  },
+  {
+    "id": "m06",
+    "subject": "Mathématiques",
+    "topic": "Cryptographie",
+    "type": "single",
+    "q": "À quoi sert principalement l'algorithme d'Euclide en cryptographie, notamment dans RSA ?",
+    "o": [
+      "À générer de grands nombres premiers",
+      "À calculer le PGCD et aider au calcul d'inverses modulaires",
+      "À chiffrer directement les messages",
+      "À compresser les données",
+      "À tester la robustesse d'une clé"
+    ],
+    "a": [
+      1
+    ],
+    "e": "L'algorithme d'Euclide calcule le PGCD. Sa version étendue permet notamment de trouver un inverse modulaire, utile dans RSA.",
+    "src": "CCTL Mathématiques, Q6"
+  },
+  {
+    "id": "m07",
+    "subject": "Mathématiques",
+    "topic": "Cryptographie",
+    "type": "single",
+    "q": "Pour que le nombre de Mersenne 2ᵖ − 1 puisse être premier, quelle condition nécessaire doit satisfaire p ?",
+    "o": [
+      "Être pair",
+      "Être lui-même premier",
+      "Être un nombre de Fermat",
+      "Être une puissance de 2",
+      "Être n'importe quel entier positif"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Si 2ᵖ − 1 est premier, alors p doit être premier. C'est une condition nécessaire, pas une garantie suffisante.",
+    "src": "CCTL Mathématiques, Q7"
+  },
+  {
+    "id": "m08",
+    "subject": "Mathématiques",
+    "topic": "Cryptographie",
+    "type": "single",
+    "q": "Pour déchiffrer un chiffrement de César sans connaître le décalage, quelle technique privilégier ?",
+    "o": [
+      "Analyse différentielle",
+      "Analyse fréquentielle des lettres",
+      "Force brute sur des clés RSA",
+      "Algorithme d'Euclide étendu",
+      "Dictionnaire de mots de passe"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Les lettres n'ont pas toutes la même fréquence dans une langue. Comparer les fréquences du texte chiffré à celles de la langue aide à retrouver le décalage.",
+    "src": "CCTL Mathématiques, Q8"
+  },
+  {
+    "id": "m09",
+    "subject": "Mathématiques",
+    "topic": "Modélisation",
+    "type": "single",
+    "q": "Un modèle prédit X, mais l'expérience donne un résultat Y très différent. Quelle est la première démarche pertinente ?",
+    "o": [
+      "Conclure immédiatement que le modèle est faux",
+      "Conclure que l'expérience est erronée",
+      "Vérifier les hypothèses du modèle et les conditions de l'expérience",
+      "Modifier les données pour correspondre au modèle",
+      "Publier uniquement le résultat théorique"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Il faut d'abord rechercher les sources possibles de divergence : hypothèses, protocole, mesures et facteurs non pris en compte.",
+    "src": "CCTL Mathématiques, Q9"
+  },
+  {
+    "id": "m10",
+    "subject": "Mathématiques",
+    "topic": "Statistiques",
+    "type": "single",
+    "q": "Pour une loi normale, environ quelle proportion des valeurs se trouve dans l'intervalle [moyenne − 2σ ; moyenne + 2σ] ?",
+    "o": [
+      "50 %",
+      "68 %",
+      "78 %",
+      "95 %",
+      "99,9 %"
+    ],
+    "a": [
+      3
+    ],
+    "e": "La règle empirique de la loi normale indique environ 68 % à ±1σ, 95 % à ±2σ et 99,7 % à ±3σ.",
+    "src": "CCTL Mathématiques, Q12"
+  },
+  {
+    "id": "m11",
+    "subject": "Mathématiques",
+    "topic": "Statistiques",
+    "type": "single",
+    "q": "La médiane est inférieure à la moyenne. Quelle forme de distribution cela suggère-t-il généralement ?",
+    "o": [
+      "Symétrique",
+      "Asymétrique à droite",
+      "Asymétrique à gauche",
+      "Uniforme",
+      "Normale"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Une queue étirée vers les grandes valeurs tire la moyenne vers la droite : la moyenne devient souvent supérieure à la médiane.",
+    "src": "CCTL Mathématiques, Q18"
+  },
+  {
+    "id": "m12",
+    "subject": "Mathématiques",
+    "topic": "Statistiques",
+    "type": "single",
+    "q": "Que représente le troisième quartile Q3 ?",
+    "o": [
+      "25 % des valeurs sont inférieures",
+      "50 % des valeurs sont inférieures",
+      "75 % des valeurs sont inférieures",
+      "La valeur maximale",
+      "La moyenne"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Q3 est le 75e percentile : environ 75 % des observations sont inférieures ou égales à cette valeur.",
+    "src": "CCTL Mathématiques, Q17"
+  },
+  {
+    "id": "m13",
+    "subject": "Mathématiques",
+    "topic": "Statistiques",
+    "type": "single",
+    "q": "Une valeur aberrante (outlier) influence principalement quelle mesure de tendance centrale ?",
+    "o": [
+      "La médiane",
+      "La moyenne",
+      "Les quantiles",
+      "Le mode uniquement",
+      "Le rang"
+    ],
+    "a": [
+      1
+    ],
+    "e": "La moyenne utilise toutes les valeurs numériques et est sensible aux valeurs extrêmes, contrairement à la médiane qui est plus robuste.",
+    "src": "CCTL Mathématiques, Q19"
+  },
+  {
+    "id": "m14",
+    "subject": "Mathématiques",
+    "topic": "Statistiques",
+    "type": "single",
+    "q": "Dans un boxplot, quelle formule donne la borne supérieure classique des valeurs aberrantes ?",
+    "o": [
+      "Moyenne + 2 × écart-type",
+      "Q1 − 1,5 × IQR",
+      "Q3 + 1,5 × IQR",
+      "Maximum − minimum",
+      "Q2 + 1,5 × IQR"
+    ],
+    "a": [
+      2
+    ],
+    "e": "La borne supérieure de Tukey est Q3 + 1,5 × IQR, où IQR = Q3 − Q1.",
+    "src": "CCTL Mathématiques, Q35"
+  },
+  {
+    "id": "m15",
+    "subject": "Mathématiques",
+    "topic": "Statistiques",
+    "type": "single",
+    "q": "Un coefficient de corrélation de Pearson égal à −1 signifie :",
+    "o": [
+      "Aucune relation entre les variables",
+      "Une relation linéaire positive parfaite",
+      "Une relation linéaire négative parfaite",
+      "Une relation forcément non linéaire",
+      "Une erreur de calcul"
+    ],
+    "a": [
+      2
+    ],
+    "e": "r = −1 correspond à une relation linéaire négative parfaite : les points sont alignés sur une droite décroissante.",
+    "src": "CCTL Mathématiques, Q34"
+  },
+  {
+    "id": "m16",
+    "subject": "Mathématiques",
+    "topic": "Probabilités",
+    "type": "single",
+    "q": "Un joueur choisit une sortie : probabilités 0,5 ; 0,3 ; 0,2. Les probabilités de gagner par sortie sont 0,8 ; 0,4 ; 0,1. Quelle est la probabilité totale de gagner ?",
+    "o": [
+      "0,43",
+      "0,50",
+      "0,54",
+      "0,64",
+      "0,80"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Par la formule des probabilités totales : 0,5×0,8 + 0,3×0,4 + 0,2×0,1 = 0,54.",
+    "src": "CCTL Mathématiques, Q22"
+  },
+  {
+    "id": "m17",
+    "subject": "Mathématiques",
+    "topic": "Probabilités",
+    "type": "single",
+    "q": "Un événement suit une loi géométrique de paramètre p = 0,25. Quelle est l'espérance du nombre d'essais jusqu'au premier succès ?",
+    "o": [
+      "0,25",
+      "1",
+      "3",
+      "4",
+      "8"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Pour une loi géométrique comptant l'essai du premier succès, E(X) = 1/p = 1/0,25 = 4.",
+    "src": "CCTL Mathématiques, Q27"
+  },
+  {
+    "id": "m18",
+    "subject": "Mathématiques",
+    "topic": "Probabilités",
+    "type": "single",
+    "q": "Quelle loi modélise le nombre d'événements rares sur un intervalle donné, à taux moyen constant ?",
+    "o": [
+      "Bernoulli",
+      "Poisson",
+      "Normale",
+      "Uniforme continue",
+      "Géométrique"
+    ],
+    "a": [
+      1
+    ],
+    "e": "La loi de Poisson modélise un nombre d'occurrences sur un intervalle de temps ou d'espace, avec un paramètre λ.",
+    "src": "CCTL Mathématiques, Q24"
+  },
+  {
+    "id": "m19",
+    "subject": "Mathématiques",
+    "topic": "Théorie des jeux",
+    "type": "single",
+    "q": "Dans un jeu à somme nulle, quelle propriété caractérise les gains des deux joueurs ?",
+    "o": [
+      "La somme des gains est constante à chaque issue",
+      "Les deux joueurs gagnent toujours la même somme",
+      "Les joueurs peuvent augmenter ensemble le gain total",
+      "Il n'existe jamais de point selle",
+      "Les stratégies mixtes sont obligatoires"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Dans un jeu à somme nulle, le gain de l'un compense exactement la perte de l'autre : la somme est constante.",
+    "src": "CCTL Mathématiques, Q33"
+  },
+  {
+    "id": "m20",
+    "subject": "Mathématiques",
+    "topic": "Théorie des jeux",
+    "type": "single",
+    "q": "Quand un couple de stratégies constitue-t-il un équilibre de Nash ?",
+    "o": [
+      "Quand le profit total est maximal",
+      "Quand aucun joueur ne peut améliorer seul son gain en changeant de stratégie",
+      "Quand les stratégies sont identiques",
+      "Quand chaque joueur minimise le gain de l'autre",
+      "Quand les joueurs ont signé un accord"
+    ],
+    "a": [
+      1
+    ],
+    "e": "À l'équilibre de Nash, aucun joueur n'a intérêt à dévier unilatéralement, compte tenu de la stratégie des autres.",
+    "src": "Initial mathématiques, Q3"
+  },
+  {
+    "id": "m21",
+    "subject": "Mathématiques",
+    "topic": "Statistiques",
+    "type": "single",
+    "q": "Pour un objet de valeur réelle 5,0 cm mesuré à 5,2 cm, quelle est l'erreur absolue ?",
+    "o": [
+      "5,2 cm",
+      "5,0 cm",
+      "0,2 cm",
+      "10,2 cm",
+      "4 %"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Erreur absolue = |valeur mesurée − valeur réelle| = |5,2 − 5,0| = 0,2 cm.",
+    "src": "Initial mathématiques, Q8"
+  },
+  {
+    "id": "m22",
+    "subject": "Mathématiques",
+    "topic": "Statistiques",
+    "type": "single",
+    "q": "Selon le critère usuel du Z-score, une observation est souvent considérée comme anormale lorsque |Z| dépasse :",
+    "o": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "10"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Un seuil de 3 (valeur absolue) est fréquemment utilisé pour signaler une observation très éloignée de la moyenne.",
+    "src": "Initial mathématiques, Q9"
+  },
+  {
+    "id": "m23",
+    "subject": "Mathématiques",
+    "topic": "Algorithmique",
+    "type": "single",
+    "q": "Quelle est la signification de la notation O(n²) ?",
+    "o": [
+      "Une borne inférieure du temps",
+      "Une borne supérieure asymptotique du temps",
+      "Le temps exact d'exécution",
+      "Un temps logarithmique",
+      "Le temps moyen uniquement"
+    ],
+    "a": [
+      1
+    ],
+    "e": "La notation Big-O décrit une borne supérieure asymptotique de la croissance du coût lorsque n augmente.",
+    "src": "Initial mathématiques, Q10"
+  },
+  {
+    "id": "m24",
+    "subject": "Mathématiques",
+    "topic": "Algorithmique",
+    "type": "single",
+    "q": "Deux boucles imbriquées parcourent toutes les paires (i, j) avec j > i. Quelle est la complexité temporelle ?",
+    "o": [
+      "O(1)",
+      "O(log n)",
+      "O(n)",
+      "O(n log n)",
+      "O(n²)"
+    ],
+    "a": [
+      4
+    ],
+    "e": "Le nombre de paires est n(n−1)/2, donc la croissance est quadratique : O(n²).",
+    "src": "Initial mathématiques, Q11"
+  },
+  {
+    "id": "m25",
+    "subject": "Mathématiques",
+    "topic": "Statistiques",
+    "type": "single",
+    "q": "Quel graphique est le plus adapté pour visualiser la relation entre deux variables quantitatives ?",
+    "o": [
+      "Histogramme",
+      "Diagramme en barres",
+      "Nuage de points",
+      "Diagramme circulaire",
+      "Boxplot"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Le nuage de points représente chaque observation par une paire (x, y), ce qui permet d'observer une relation entre deux variables.",
+    "src": "Initial mathématiques, Q7"
+  },
+  {
+    "id": "m26",
+    "subject": "Mathématiques",
+    "topic": "Statistiques",
+    "type": "single",
+    "q": "Quel est l'objectif de la méthode des moindres carrés pour une régression linéaire ?",
+    "o": [
+      "Maximiser la moyenne",
+      "Minimiser la somme des carrés des résidus",
+      "Trier les données",
+      "Supprimer toutes les valeurs extrêmes",
+      "Calculer la médiane"
+    ],
+    "a": [
+      1
+    ],
+    "e": "La droite des moindres carrés minimise la somme des carrés des écarts verticaux entre les observations et les valeurs prédites.",
+    "src": "Initial numériques, Q8"
+  },
+  {
+    "id": "m27",
+    "subject": "Mathématiques",
+    "topic": "Statistiques",
+    "type": "single",
+    "q": "Que signifie le seuil de signification α dans un test d'hypothèse ?",
+    "o": [
+      "La probabilité que H0 soit vraie",
+      "Le risque maximal accepté d'erreur de type I",
+      "La p-valeur du test",
+      "La puissance du test",
+      "La taille de l'échantillon"
+    ],
+    "a": [
+      1
+    ],
+    "e": "α est le risque de rejeter H0 alors qu'elle est vraie (erreur de type I) que l'on accepte avant le test.",
+    "src": "Initial mathématiques, Q19"
+  },
+  {
+    "id": "m28",
+    "subject": "Mathématiques",
+    "topic": "Graphes",
+    "type": "single",
+    "q": "Quelle structure représente naturellement un réseau social (personnes = nœuds, relations = liens) ?",
+    "o": [
+      "Une série temporelle",
+      "Une matrice de transition",
+      "Un graphe",
+      "Un automate fini",
+      "Une équation différentielle"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Un graphe représente des entités par des sommets et leurs relations par des arêtes ou des arcs.",
+    "src": "Initial mathématiques, Q16"
+  },
+  {
+    "id": "m29",
+    "subject": "Mathématiques",
+    "topic": "Graphes",
+    "type": "single",
+    "q": "Pour représenter des contraintes de précédence (A doit finir avant B), quelle structure convient ?",
+    "o": [
+      "Un graphe complet",
+      "Un graphe orienté acyclique (DAG)",
+      "Un arbre binaire",
+      "Un cycle hamiltonien",
+      "Une liste chaînée"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Les dépendances sont orientées de la tâche préalable vers la tâche suivante. L'absence de cycle évite les dépendances circulaires.",
+    "src": "CCTL Mathématiques, Q14"
+  },
+  {
+    "id": "m30",
+    "subject": "Mathématiques",
+    "topic": "Cryptographie",
+    "type": "single",
+    "q": "Pour envoyer un message confidentiel à Alice avec RSA, quelle clé Bob utilise-t-il pour chiffrer ?",
+    "o": [
+      "La clé publique de Bob",
+      "La clé privée de Bob",
+      "La clé publique d'Alice",
+      "La clé privée d'Alice",
+      "Une clé secrète transmise en clair"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Pour que seule Alice puisse déchiffrer, Bob chiffre avec la clé publique d'Alice. Alice déchiffre avec sa clé privée.",
+    "src": "CCTL Mathématiques, Q30"
+  },
+  {
+    "id": "n01",
+    "subject": "Sciences du numérique",
+    "topic": "Python",
+    "type": "single",
+    "q": "En Python, quelle valeur doit retourner une fonction factorielle lorsque n = 0 ?",
+    "o": [
+      "0",
+      "−1",
+      "Une erreur",
+      "1",
+      "Valeur non définie"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Par définition, 0! = 1. C'est le cas de base à traiter dans une fonction factorielle.",
+    "src": "Initial numériques, Q1"
+  },
+  {
+    "id": "n02",
+    "subject": "Sciences du numérique",
+    "topic": "Programmation",
+    "type": "single",
+    "q": "Quel paradigme privilégie les fonctions de première classe, l'immutabilité et l'évitement des effets de bord ?",
+    "o": [
+      "Programmation impérative",
+      "Programmation orientée objet",
+      "Programmation fonctionnelle",
+      "Programmation procédurale",
+      "Programmation logique"
+    ],
+    "a": [
+      2
+    ],
+    "e": "La programmation fonctionnelle met l'accent sur les fonctions, l'immutabilité et la limitation des effets de bord.",
+    "src": "Initial numériques, Q2"
+  },
+  {
+    "id": "n03",
+    "subject": "Sciences du numérique",
+    "topic": "Structures de données",
+    "type": "single",
+    "q": "Quelle structure offre une recherche en O(1) en moyenne pour tester la présence d'une clé, sans ordre particulier ?",
+    "o": [
+      "Liste chaînée",
+      "Tableau trié",
+      "Table de hachage",
+      "File de priorité",
+      "Pile"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Une table de hachage calcule une position à partir du hash de la clé. La recherche est O(1) en moyenne, O(n) dans le pire cas.",
+    "src": "Initial numériques, Q3"
+  },
+  {
+    "id": "n04",
+    "subject": "Sciences du numérique",
+    "topic": "Systèmes d'exploitation",
+    "type": "single",
+    "q": "Quelle est la fonction essentielle d'un driver dans un système d'exploitation ?",
+    "o": [
+      "Optimiser le processeur",
+      "Permettre à l'OS de communiquer avec et contrôler un matériel spécifique",
+      "Gérer l'interface graphique",
+      "Stocker les fichiers système",
+      "Assurer la sécurité du réseau"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Un pilote (driver) fournit l'interface logicielle nécessaire à l'OS pour utiliser un périphérique matériel.",
+    "src": "Initial numériques, Q4"
+  },
+  {
+    "id": "n05",
+    "subject": "Sciences du numérique",
+    "topic": "Systèmes d'exploitation",
+    "type": "single",
+    "q": "Qu'est-ce que la fragmentation interne en gestion mémoire ?",
+    "o": [
+      "Des blocs libres dispersés et non contigus",
+      "L'espace perdu à l'intérieur d'un bloc alloué, trop grand pour le besoin",
+      "Une RAM complètement remplie",
+      "Des secteurs de fichier dispersés sur disque",
+      "Une table des pages trop grande"
+    ],
+    "a": [
+      1
+    ],
+    "e": "La fragmentation interne correspond à la partie inutilisée à l'intérieur d'un bloc déjà attribué à un processus.",
+    "src": "Initial numériques, Q5"
+  },
+  {
+    "id": "n06",
+    "subject": "Sciences du numérique",
+    "topic": "Algorithmique",
+    "type": "single",
+    "q": "Dans une liste triée, quelle méthode de recherche est généralement plus efficace qu'un parcours séquentiel ?",
+    "o": [
+      "Une boucle while qui parcourt tout",
+      "La recherche dichotomique",
+      "La méthode find sur une liste",
+      "Mélanger la liste avant la recherche",
+      "Un parcours aléatoire"
+    ],
+    "a": [
+      1
+    ],
+    "e": "La recherche dichotomique divise l'intervalle de recherche par deux à chaque étape : O(log n) sur une liste triée et indexable.",
+    "src": "Initial numériques, Q6"
+  },
+  {
+    "id": "n07",
+    "subject": "Sciences du numérique",
+    "topic": "Algorithmique",
+    "type": "single",
+    "q": "Quelle formule calcule directement la somme des N premiers entiers positifs ?",
+    "o": [
+      "N × N",
+      "N × (N + 1) / 2",
+      "N + (N − 1)",
+      "N puissance N + 1",
+      "N / 2"
+    ],
+    "a": [
+      1
+    ],
+    "e": "La somme 1 + 2 + … + N vaut N(N+1)/2. Le calcul direct est en O(1).",
+    "src": "Initial numériques, Q7"
+  },
+  {
+    "id": "n08",
+    "subject": "Sciences du numérique",
+    "topic": "Systèmes d'exploitation",
+    "type": "single",
+    "q": "Quel outil Windows permet d'observer l'utilisation du processeur et de la mémoire ?",
+    "o": [
+      "Wireshark",
+      "Gestionnaire des tâches",
+      "GCC",
+      "Git",
+      "Matplotlib"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Le Gestionnaire des tâches permet notamment de suivre l'utilisation CPU, mémoire, disque et réseau des processus.",
+    "src": "Initial numériques, Q10"
+  },
+  {
+    "id": "n09",
+    "subject": "Sciences du numérique",
+    "topic": "Performance",
+    "type": "single",
+    "q": "Pour tester un serveur web sous charge, quelle démarche est adaptée ?",
+    "o": [
+      "Lire uniquement sa documentation",
+      "Utiliser JMeter ou ApacheBench, puis relever temps de réponse et taux d'erreur",
+      "Installer un antivirus et compter les fichiers",
+      "Répéter ls et compter les lignes",
+      "Lire les logs sans lancer de test"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Un générateur de charge simule des requêtes. On collecte ensuite des indicateurs comme les temps de réponse et le taux d'erreur.",
+    "src": "Initial numériques, Q11"
+  },
+  {
+    "id": "n10",
+    "subject": "Sciences du numérique",
+    "topic": "Green IT",
+    "type": "single",
+    "q": "Quel est l'objectif principal du Green IT ?",
+    "o": [
+      "Accélérer les processeurs, quel que soit leur coût énergétique",
+      "Réduire la consommation énergétique et l'impact environnemental du numérique",
+      "Remplacer tous les logiciels propriétaires",
+      "Tout déplacer vers le cloud",
+      "Augmenter systématiquement la puissance des serveurs"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Le Green IT vise à réduire les impacts environnementaux des technologies de l'information, notamment énergie et émissions.",
+    "src": "Initial numériques, Q12"
+  },
+  {
+    "id": "n11",
+    "subject": "Sciences du numérique",
+    "topic": "Green IT",
+    "type": "multiple",
+    "q": "Quelles pratiques correspondent au Green IT ?",
+    "o": [
+      "Virtualiser les serveurs pour réduire le nombre de machines physiques",
+      "Mettre en veille ou éteindre les ordinateurs inactifs",
+      "Stocker toutes les données sur des serveurs surdimensionnés",
+      "Choisir des datacenters utilisant des énergies renouvelables et un refroidissement efficace",
+      "Installer des logiciels sans se préoccuper de leur consommation"
+    ],
+    "a": [
+      0,
+      1,
+      3
+    ],
+    "e": "La virtualisation, l'extinction des équipements inactifs et des datacenters efficaces réduisent l'énergie consommée et l'impact associé.",
+    "src": "Initial numériques, Q13"
+  },
+  {
+    "id": "n12",
+    "subject": "Sciences du numérique",
+    "topic": "Graphes",
+    "type": "single",
+    "q": "Quelle différence décrit correctement BFS et DFS ?",
+    "o": [
+      "BFS utilise une pile et DFS une file",
+      "BFS explore niveau par niveau ; DFS approfondit un chemin avant de revenir en arrière",
+      "BFS ne fonctionne que sur les graphes orientés",
+      "DFS explore toujours les voisins les plus proches en premier",
+      "Ils visitent toujours les sommets dans le même ordre"
+    ],
+    "a": [
+      1
+    ],
+    "e": "BFS utilise classiquement une file FIFO. DFS utilise une pile (ou la récursion) et explore en profondeur.",
+    "src": "Initial numériques, Q14"
+  },
+  {
+    "id": "n13",
+    "subject": "Sciences du numérique",
+    "topic": "Graphes",
+    "type": "single",
+    "q": "Dans le graphe A relié à B et C, puis B relié à D et E, quel est l'ordre BFS depuis A (voisins alphabétiques) ?",
+    "o": [
+      "A, B, C, D, E",
+      "A, C, B, E, D",
+      "A, B, D, E, C",
+      "A, B, C, E, D",
+      "A, C, B, D, E"
+    ],
+    "a": [
+      0
+    ],
+    "e": "BFS visite d'abord A, puis ses voisins B et C, puis les voisins de B qui restent à découvrir : D et E.",
+    "src": "Initial numériques, Q15"
+  },
+  {
+    "id": "n14",
+    "subject": "Sciences du numérique",
+    "topic": "Python",
+    "type": "single",
+    "q": "Quelle instruction Matplotlib affiche une liste de valeurs sous forme d'histogramme ?",
+    "o": [
+      "plt.plot.hist(data)",
+      "plt.line(data)",
+      "plt.hist(data)",
+      "plt.bar(data)",
+      "plt.scatter(data)"
+    ],
+    "a": [
+      2
+    ],
+    "e": "La fonction plt.hist(data) construit un histogramme pour visualiser la distribution des valeurs.",
+    "src": "CCTL Sciences du numérique, Q1"
+  },
+  {
+    "id": "n15",
+    "subject": "Sciences du numérique",
+    "topic": "Python",
+    "type": "single",
+    "q": "Quelle fonction NumPy permet d'obtenir la matrice de corrélation de Pearson entre x et y ?",
+    "o": [
+      "np.polyfit(x, y, 1)",
+      "np.corrcoef(x, y)",
+      "np.histogram(x, y)",
+      "np.mean(x, y)",
+      "np.sort(x, y)"
+    ],
+    "a": [
+      1
+    ],
+    "e": "np.corrcoef(x, y) calcule la matrice de corrélation ; l'élément [0, 1] correspond à la corrélation entre x et y.",
+    "src": "CCTL Sciences du numérique, Q3"
+  },
+  {
+    "id": "n16",
+    "subject": "Sciences du numérique",
+    "topic": "Systèmes d'exploitation",
+    "type": "single",
+    "q": "À quoi sert principalement la séparation entre mode noyau et mode utilisateur ?",
+    "o": [
+      "Permettre à chaque utilisateur d'écrire son noyau",
+      "Protéger l'OS et le matériel en limitant les privilèges des applications",
+      "Accélérer les jeux vidéo",
+      "Faciliter les échanges entre utilisateurs",
+      "Réduire directement la consommation CPU"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Le mode utilisateur restreint les opérations possibles aux applications. Le noyau conserve les privilèges nécessaires au contrôle du matériel.",
+    "src": "CCTL Sciences du numérique, Q8"
+  },
+  {
+    "id": "n17",
+    "subject": "Sciences du numérique",
+    "topic": "Python",
+    "type": "single",
+    "q": "Que renvoie math.factorial(0) en Python ?",
+    "o": [
+      "0",
+      "−1",
+      "Une erreur",
+      "1",
+      "None"
+    ],
+    "a": [
+      3
+    ],
+    "e": "La factorielle de zéro vaut 1, y compris avec math.factorial(0).",
+    "src": "CCTL Sciences du numérique, Q9"
+  },
+  {
+    "id": "n18",
+    "subject": "Sciences du numérique",
+    "topic": "Python",
+    "type": "multiple",
+    "q": "Avec d = {'a': 1, 'b': 2, 'c': 3}, quelles affirmations sont vraies en moyenne ?",
+    "o": [
+      "d['a'] = 10 s'exécute en O(1) grâce au hash de la clé",
+      "'a' in d s'exécute en O(1) grâce au hash de la clé",
+      "10 in d.values() s'exécute en O(1) car les valeurs sont hachées",
+      "len(d) s'exécute en O(1) car le compteur est maintenu à jour",
+      "sorted(d.keys()) s'exécute en O(1)"
+    ],
+    "a": [
+      0,
+      1,
+      3
+    ],
+    "e": "Les opérations sur les clés et len(d) sont O(1) en moyenne. La recherche dans values() est O(n) et le tri des clés coûte O(n log n).",
+    "src": "CCTL Sciences du numérique, Q15"
+  },
+  {
+    "id": "n19",
+    "subject": "Sciences du numérique",
+    "topic": "Graphes",
+    "type": "single",
+    "q": "Quel algorithme explore les sommets niveau par niveau en utilisant une file FIFO ?",
+    "o": [
+      "DFS",
+      "BFS",
+      "Dijkstra",
+      "Tri topologique",
+      "Kruskal"
+    ],
+    "a": [
+      1
+    ],
+    "e": "BFS ajoute les voisins à une file et retire les sommets dans leur ordre d'arrivée (FIFO).",
+    "src": "CCTL Sciences du numérique, Q27"
+  },
+  {
+    "id": "n20",
+    "subject": "Sciences du numérique",
+    "topic": "Python",
+    "type": "single",
+    "q": "Que permet le code pandas suivant : data = pd.read_excel('data.xlsx'); data.head() ?",
+    "o": [
+      "Lire un fichier Excel et afficher les premières lignes",
+      "Écrire un fichier Excel",
+      "Supprimer les premières lignes",
+      "Trier toutes les colonnes",
+      "Récupérer les métadonnées du fichier"
+    ],
+    "a": [
+      0
+    ],
+    "e": "read_excel charge le tableur dans un DataFrame et head() affiche par défaut les cinq premières lignes.",
+    "src": "CCTL Sciences du numérique, Q30"
+  },
+  {
+    "id": "n21",
+    "subject": "Sciences du numérique",
+    "topic": "Green IT",
+    "type": "single",
+    "q": "Parmi trois algorithmes réalisant la même tâche, lequel est généralement le plus sobre pour un grand n ?",
+    "o": [
+      "O(n²), consommation élevée",
+      "O(n log n), consommation moyenne",
+      "O(n), consommation faible",
+      "Ils consomment nécessairement autant",
+      "La complexité ne joue aucun rôle"
+    ],
+    "a": [
+      2
+    ],
+    "e": "À tâche identique, une complexité plus faible réduit généralement le nombre d'opérations et donc l'énergie nécessaire.",
+    "src": "CCTL Mathématiques, Q16"
+  },
+  {
+    "id": "n22",
+    "subject": "Sciences du numérique",
+    "topic": "Graphes",
+    "type": "single",
+    "q": "Dans une représentation par liste d'adjacence, que contient graph['A'] typiquement ?",
+    "o": [
+      "Le degré de tous les sommets",
+      "La liste des voisins de A",
+      "La matrice d'incidence complète",
+      "Le poids total du graphe",
+      "Le chemin le plus court"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Une liste d'adjacence associe à chaque sommet la liste des sommets qui lui sont directement reliés.",
+    "src": "CCTL Sciences du numérique, Q20"
+  },
+  {
+    "id": "n23",
+    "subject": "Sciences du numérique",
+    "topic": "Algorithmique",
+    "type": "single",
+    "q": "Quelle complexité moyenne est généralement associée à l'accès ou à la recherche d'une clé dans un dictionnaire Python ?",
+    "o": [
+      "O(n²)",
+      "O(log n)",
+      "O(1)",
+      "O(n log n)",
+      "O(2ⁿ)"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Les dictionnaires Python reposent sur le hachage : accès et recherche par clé sont O(1) en moyenne, avec un pire cas en O(n).",
+    "src": "CCTL Sciences du numérique, Q15"
+  },
+  {
+    "id": "n24",
+    "subject": "Sciences du numérique",
+    "topic": "Mesure expérimentale",
+    "type": "single",
+    "q": "Pour étudier l'effet de la vitesse d'un convoyeur sur les défauts, quelle démarche permet d'isoler cette influence ?",
+    "o": [
+      "Modifier en même temps vitesse, température et matière première",
+      "Faire varier la vitesse en maintenant les autres paramètres constants",
+      "Observer uniquement les données historiques",
+      "Interroger les opérateurs sur leur opinion"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Il faut contrôler les autres facteurs pour isoler l'effet de la variable étudiée.",
+    "src": "CCTL Sciences du numérique, Q7"
+  },
+  {
+    "id": "n25",
+    "subject": "Sciences du numérique",
+    "topic": "Statistiques",
+    "type": "single",
+    "q": "Quel graphique permet de visualiser la distribution d'une variable numérique continue ?",
+    "o": [
+      "Histogramme",
+      "Nuage de points",
+      "Diagramme en lignes",
+      "Diagramme circulaire",
+      "Tableau"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Un histogramme regroupe les valeurs numériques en classes et visualise leur répartition.",
+    "src": "CCTL Sciences du numérique, Q14"
+  }
+]

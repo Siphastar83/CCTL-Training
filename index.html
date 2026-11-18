@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10131d">
+  <meta name="description" content="CCTL Trainer — entraîne-toi aux CCTL avec des QCM interactifs.">
+  <title>CCTL Trainer — Révise intelligemment</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" data-view="home" aria-label="CCTL Trainer accueil">
+        <span class="brand-mark">C</span><span>CCTL<span class="brand-light">TRAINER</span></span>
+      </a>
+      <div class="side-label">ESPACE DE RÉVISION</div>
+      <nav class="nav">
+        <button class="nav-link active" data-view="home"><span class="nav-icon">⌂</span>Vue d'ensemble</button>
+        <button class="nav-link" data-view="practice"><span class="nav-icon">✳</span>Entraînement</button>
+        <button class="nav-link" data-view="topics"><span class="nav-icon">▤</span>Par matière</button>
+        <button class="nav-link" data-view="stats"><span class="nav-icon">↗</span>Ma progression</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="mini-card">
+          <div class="mini-orb">✦</div>
+          <strong>Un peu chaque jour.</strong>
+          <p>La régularité fait la différence.</p>
+        </div>
+        <div class="side-foot">Version 1.0 · Fonctionne hors ligne après chargement</div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-menu" id="menuBtn" aria-label="Ouvrir le menu">☰</button>
+        <div class="breadcrumb">ESPACE PERSONNEL <span>/</span> <b id="crumb">Vue d'ensemble</b></div>
+        <div class="top-actions">
+          <span class="status-dot"></span><span class="status-text">Progression sauvegardée</span>
+          <button class="avatar" title="Profil local">A</button>
+        </div>
+      </header>
+      <div class="content" id="appContent">
+        <section class="hero">
+          <div class="hero-copy">
+            <div class="eyebrow"><span class="eyebrow-dot"></span> TON ESPACE DE RÉVISION</div>
+            <h1>Prêt à faire<br><em>la différence ?</em></h1>
+            <p>Entraîne-toi sur les notions de tes CCTL, identifie tes points faibles et progresse à ton rythme.</p>
+            <button class="primary-btn" id="heroStart">Commencer un entraînement <span>↗</span></button>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="art-ring ring-one"></div><div class="art-ring ring-two"></div>
+            <div class="art-card card-back">∑</div>
+            <div class="art-card card-front"><span class="art-tick">✓</span><strong>QCM</strong><small>MODE RÉVISION</small><div class="art-bars"><i></i><i></i><i></i><i></i><i></i></div></div>
+            <div class="art-orbit">✦</div>
+          </div>
+        </section>
+
+        <section class="stats-grid" id="overviewStats"></section>
+        <section class="section-block">
+          <div class="section-heading"><div><div class="eyebrow muted">CHOISIS TON PARCOURS</div><h2>Que veux-tu travailler ?</h2></div><button class="text-btn" data-view="topics">Voir toutes les matières <span>→</span></button></div>
+          <div class="subject-grid" id="subjectCards"></div>
+        </section>
+        <section class="section-block bottom-grid">
+          <div class="panel recent-panel">
+            <div class="panel-head"><div><div class="eyebrow muted">REPRENDRE</div><h3>Dernière activité</h3></div><span class="panel-icon">◷</span></div>
+            <div id="recentActivity" class="recent-empty">Pas encore de session. Lance un premier QCM pour voir tes résultats ici.</div>
+          </div>
+          <div class="panel tip-panel">
+            <div class="tip-icon">✧</div><div class="eyebrow muted">LE CONSEIL DU JOUR</div>
+            <h3>Comprendre vaut mieux que mémoriser.</h3>
+            <p>Après chaque réponse, prends quelques secondes pour lire l'explication. C'est là que tu consolides tes connaissances.</p>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
