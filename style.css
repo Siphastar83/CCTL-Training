@@ -138,3 +138,11 @@ code{background:#222b3a;border-radius:5px;padding:1px 5px;font-size:.92em;color:
 .hint-inline{font-weight:500;letter-spacing:.3px;text-transform:none;color:#5f6a7d}
 .subject-icon.other{background:rgba(255,179,107,.14);color:var(--orange)}
 @media(max-width:620px){.doc-card{flex-wrap:wrap}.doc-actions{flex-direction:row;width:100%}.doc-actions>*{flex:1}.doc-subject input{width:150px}}
+.ask-body{font-size:12px;color:#c3ccda;line-height:1.6}.ask-p{margin:0 0 10px}
+.ask-warn{border:1px solid #5b4630;background:#22201c;color:#ffd7ad;border-radius:10px;padding:11px 13px;margin-bottom:12px}
+.ask-note{font-size:10px;color:var(--muted);line-height:1.6;margin:8px 0 0}
+.admin-steps{font-size:11px;color:#a9b4c4;line-height:1.8;padding-left:18px;margin:8px 0}
+.admin-steps a{color:var(--accent)}
+.admin-row{display:flex;gap:8px;margin-top:10px}.admin-row input{flex:1;background:#1b2230;border:1px solid #2b3547;border-radius:9px;color:var(--text);font:inherit;font-size:12px;padding:9px 11px}
+.admin-on{border-color:#3d5a33}.admin-on h3{color:var(--accent)}.admin-on .secondary-btn{margin-top:10px}
+.pub-btn{color:var(--accent);border-color:#3d5a33}

@@ -13,22 +13,41 @@ Plateforme de QCM responsive en HTML / CSS / JavaScript, publiable gratuitement 
    - les schémas, graphes, tableaux et formules mathématiques, découpés automatiquement en images ;
    - un thème (Probabilités, Graphes, Python…), deviné à partir des mots-clés.
 3. Le résultat est mis en cache dans le navigateur (IndexedDB) : les visites suivantes sont instantanées.
+4. Un administrateur peut partager les questions avec tous les visiteurs via une base Supabase gratuite (voir plus bas).
 
-## Deux façons d'ajouter des PDF
+## Ajouter un CCTL
 
-### Pour tout le monde : le dossier `pdf/` du dépôt
-Dépose les PDF dans le dossier `pdf/` du dépôt GitHub (**Add file → Upload files**). Tous les visiteurs voient les nouvelles questions automatiquement, sans autre modification.
+Va sur la page **Mes CCTL (PDF)** et glisse le PDF dessus. Le site te prévient s'il est **déjà importé** :
+- même fichier : il le dit et n'importe rien ;
+- même sujet dans un autre fichier (par exemple le PDF d'un autre élève) : il indique combien de questions sont identiques et te demande si tu veux quand même l'importer.
 
-Le site trouve les fichiers de trois façons, dans cet ordre :
-1. `pdf/index.json`, s'il existe : une liste de noms de fichiers, ex. `["CCTL maths.pdf", "CCTL numérique.pdf"]` ;
-2. sur GitHub Pages, l'API GitHub, qui liste le dossier `pdf/` (dépôt **public**) ;
-3. en local, la liste du dossier fournie par `python -m http.server`.
+Ensuite :
+- **visiteur** : le CCTL reste uniquement sur son appareil ;
+- **administrateur connecté** : il choisit **Partager avec tout le monde**. Les questions (texte et images) sont enregistrées dans la base Supabase et tous les visiteurs les ont immédiatement. **Le PDF lui-même, avec le nom et les notes de l'élève, n'est jamais envoyé.**
 
-⚠️ Les PDF de correction contiennent le **nom et les notes de l'élève**. Sur un dépôt public, ils sont visibles par tout le monde.
+L'administrateur peut aussi retirer un CCTL partagé et corriger sa matière pour tout le monde.
 
-### Pour soi : la page « Mes CCTL (PDF) »
-Glisse un PDF sur la page (ou clique sur la zone d'import). Il est analysé et conservé **uniquement sur cet appareil** : rien n'est envoyé sur Internet.
-Sur cette page, on peut aussi corriger la matière d'un PDF ou supprimer un PDF importé.
+## Mettre en place la base partagée (Supabase, gratuit)
+
+1. Crée un compte sur [supabase.com](https://supabase.com), puis **New project** (choisis une région en Europe, par exemple Paris ou Francfort).
+2. **SQL Editor → New query** : colle le contenu de `supabase.sql`, puis **Run**.
+3. **Authentication → Users → Add user → Create new user** : ton e-mail et un mot de passe, coche *Auto Confirm User*.
+4. Dans le SQL Editor, déclare-toi administrateur (remplace l'e-mail) :
+   ```sql
+   insert into public.cctl_admins (user_id) select id from auth.users where email = 'ton.email@exemple.fr';
+   ```
+5. Conseillé : **Authentication → Sign In / Providers**, désactive *Allow new users to sign up*. Même activé, un inconnu qui créerait un compte ne pourrait rien modifier.
+6. **Project Settings → API** : copie *Project URL* et la clé *anon public*, puis colle-les en haut de `app.js` :
+   ```js
+   const SUPABASE_URL = "https://xxxxxxxx.supabase.co";
+   const SUPABASE_ANON_KEY = "eyJhbGciOi...";
+   ```
+   La clé *anon* est faite pour être publique : ce sont les règles du script SQL qui protègent la base (lecture pour tous, écriture réservée aux administrateurs). Ne mets **jamais** la clé *service_role* dans le site.
+7. Sur le site, page **Mes CCTL**, bloc **Administrateur** : connecte-toi avec l'e-mail et le mot de passe de l'étape 3.
+
+Bon à savoir : un projet Supabase gratuit se met **en pause après 7 jours sans visite**. Le site l'indique alors (les CCTL déjà chargés restent disponibles sur chaque appareil) ; il suffit de cliquer sur *Restore project* dans le tableau de bord Supabase.
+
+Le dossier `pdf/` du dépôt fonctionne toujours en complément : tout PDF qui y est déposé est chargé pour tout le monde. Mais il rend le PDF public, avec le nom et les notes de l'élève.
 
 ## Contenu
 
@@ -36,8 +55,8 @@ Sur cette page, on peut aussi corriger la matière d'un PDF ou supprimer un PDF 
 - Entraînement par matière, par thème ou par CCTL (dans l'ordre du sujet)
 - Questions à réponse unique ou à réponses multiples, correction immédiate avec explication
 - Bouton **⚑ Signaler** sur chaque question
-- Statistiques et historique dans `localStorage`, PDF analysés dans IndexedDB
-- Responsive PC / tablette / mobile, aucun serveur ni base de données
+- CCTL partagés dans Supabase, statistiques dans `localStorage`, PDF analysés gardés en cache dans IndexedDB
+- Responsive PC / tablette / mobile, sans serveur à gérer
 
 ## Lancer en local
 
@@ -49,8 +68,8 @@ Puis ouvre http://localhost:8000. Un serveur est nécessaire : ouvrir `index.htm
 
 ## Publier sur GitHub Pages
 
-1. Crée un dépôt **public**, par exemple `cctl-trainer`.
-2. Ajoute à la racine `index.html`, `style.css`, `app.js`, `pdf-import.js`, le dossier `lib/` et le dossier `pdf/` avec tes PDF.
+1. Crée un dépôt, par exemple `cctl-trainer`.
+2. Ajoute à la racine `index.html`, `style.css`, `app.js`, `pdf-import.js` et le dossier `lib/` (`supabase.sql` et `pdf/` sont facultatifs).
 3. Dans **Settings → Pages**, choisis **Deploy from a branch**, branche `main`, dossier `/ (root)`.
 4. Attends le déploiement : GitHub affiche l'URL publique du site.
 
