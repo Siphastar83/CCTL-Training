@@ -4,47 +4,48 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#10131d">
-  <meta name="description" content="CCTL Trainer — transforme tes PDF de CCTL en QCM interactifs.">
-  <title>CCTL Trainer — Révise intelligemment</title>
+  <meta name="robots" content="noindex">
+  <meta name="description" content="CCTL Trainer — entraînement aux CCTL, sur invitation.">
+  <title>CCTL Trainer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="app-shell">
+  <!-- Connexion / inscription -->
+  <div id="auth" class="auth-screen" hidden></div>
+
+  <!-- Application -->
+  <div class="app-shell" id="app" hidden>
     <aside class="sidebar" id="sidebar">
-      <a class="brand" href="#" aria-label="CCTL Trainer accueil">
+      <a class="brand" href="#/home" aria-label="CCTL Trainer accueil">
         <span class="brand-mark">C</span><span>CCTL<span class="brand-light">TRAINER</span></span>
       </a>
       <div class="side-label">ESPACE DE RÉVISION</div>
       <nav class="nav">
-        <button class="nav-link active" data-view="home"><span class="nav-icon">⌂</span>Vue d'ensemble</button>
-        <button class="nav-link" data-view="practice"><span class="nav-icon">✳</span>Entraînement</button>
-        <button class="nav-link" data-view="topics"><span class="nav-icon">▤</span>Par matière</button>
-        <button class="nav-link" data-view="stats"><span class="nav-icon">↗</span>Ma progression</button>
-        <button class="nav-link" data-view="library"><span class="nav-icon">⇪</span>Mes CCTL (PDF)</button>
+        <button class="nav-link" data-view="home"><span class="nav-icon">⌂</span>Accueil</button>
+        <button class="nav-link" data-view="cctl"><span class="nav-icon">▤</span>CCTL</button>
+        <button class="nav-link" data-view="progress"><span class="nav-icon">↗</span>Ma progression</button>
+        <button class="nav-link" data-view="library"><span class="nav-icon">⇪</span>Mes CCTL</button>
+        <button class="nav-link" data-view="profile"><span class="nav-icon">◉</span>Profil</button>
       </nav>
       <div class="sidebar-bottom">
-        <div class="mini-card">
-          <div class="mini-orb">✦</div>
-          <strong>Un peu chaque jour.</strong>
-          <p>La régularité fait la différence.</p>
-        </div>
-        <div class="side-foot">Version 3.0 · Questions générées depuis tes PDF</div>
+        <button class="user-chip" id="userChip" data-go="profile"></button>
+        <div class="side-foot">Version 5.0 · Questions générées depuis les PDF</div>
       </div>
     </aside>
 
     <main class="main">
       <header class="topbar">
         <button class="mobile-menu" id="menuBtn" aria-label="Ouvrir le menu">☰</button>
-        <div class="breadcrumb">ESPACE PERSONNEL <span>/</span> <b id="crumb">Vue d'ensemble</b></div>
+        <div class="breadcrumb">CCTL TRAINER <span>/</span> <b id="crumb">Accueil</b></div>
         <div class="top-actions">
-          <span class="status-dot"></span><span class="status-text">Chargement…</span>
-          <button class="avatar" title="Profil local">A</button>
+          <span class="busy-bar" id="busyBar"></span>
+          <button class="avatar" id="avatarBtn" title="Mon profil">·</button>
         </div>
       </header>
-      <div class="content" id="appContent"><div class="empty-state">Chargement…</div></div>
+      <div class="content" id="appContent"></div>
     </main>
   </div>
   <div class="toast" id="toast" role="status"></div>
